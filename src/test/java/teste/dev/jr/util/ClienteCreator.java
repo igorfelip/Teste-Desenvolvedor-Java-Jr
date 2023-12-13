@@ -1,20 +1,33 @@
 package teste.dev.jr.util;
 
-import teste.dev.jr.jr.domain.Cliente;
+import teste.dev.jr.jr.domain.Clientes;
+
+import java.math.BigDecimal;
 
 public class ClienteCreator {
-    public static Cliente criaClienteSemId() {
-        return Cliente.builder().nome("Igor").build();
+    public static Clientes criaClienteParaSerSalvo() {
+        return Clientes.builder()
+                .nome("Igor")
+                .cpf(143452L)
+                .saldo(BigDecimal.valueOf(10000))
+                .build();
     }
 
-    public static Cliente criaClienteComId() {
-        return Cliente.builder().id(1l).nome("Igor").build();
+    public static Clientes criaClienteValido() {
+        return Clientes.builder()
+                .id(1L)
+                .cpf(143452L)
+                .saldo(BigDecimal.valueOf(10000))
+                .nome("Igor")
+                .build();
     }
 
-    public static Cliente criaClienteComNomeDiferente() {
-        return Cliente.builder().id(1l).nome("José").build();
-    }
-    public static Double valor(){
-        return 200d;
+    public static Clientes criaClienteParaSerAtualizado() {
+        return Clientes.builder()
+                .id(1L)
+                .cpf(143452L)
+                .saldo(BigDecimal.valueOf(10000))
+                .nome("José")
+                .build();
     }
 }
