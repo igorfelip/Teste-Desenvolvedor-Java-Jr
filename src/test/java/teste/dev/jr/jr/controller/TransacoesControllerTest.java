@@ -68,7 +68,7 @@ class TransacoesControllerTest {
 
     @Test
     void deposito() {
-        Transacoes transacoes = transacoesController.saque(TransacoesPostRequestBodyCreator.criatransacoesPostRequestBody()
+        Transacoes transacoes = transacoesController.deposito(TransacoesPostRequestBodyCreator.criatransacoesPostRequestBody()
                 , BigDecimal.valueOf(300)).getBody();
         Assertions.assertThat(transacoes).isNotNull();
 
