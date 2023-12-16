@@ -29,7 +29,6 @@ public class EmpresasController {
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<Empresas> findById(Long id) {
-
         return new ResponseEntity<>(empresasService.findById(id), HttpStatus.OK);
     }
 

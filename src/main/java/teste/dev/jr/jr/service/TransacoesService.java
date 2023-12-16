@@ -80,7 +80,6 @@ public class TransacoesService {
         BigDecimal subtract = valor.subtract(valorTaxa);
         empresa.setSaldo(empresa.getSaldo().add(subtract));
 
-
         log.info("Deposito efetuado com sucesso.");
 
         return transacoesRepository.save(TransacoesMapper.INSTANCE.toTransacao(transacao));
