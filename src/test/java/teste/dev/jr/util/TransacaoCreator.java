@@ -27,7 +27,7 @@ public class TransacaoCreator {
                 .id(1L)
                 .clientes(ClienteCreator.criaClienteParaSerSalvo())
                 .empresas(EmpresaCreator.criaEmpresaParaSerSalva())
-                .valor(BigDecimal.valueOf(300))
+                .valor(BigDecimal.valueOf(200))
                 .build();
     }
 }
