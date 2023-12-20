@@ -22,7 +22,7 @@ public class Clientes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private Long cpf;
+    private String CPF;
     private BigDecimal saldo;
 
 }

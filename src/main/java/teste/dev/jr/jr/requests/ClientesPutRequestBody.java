@@ -2,6 +2,7 @@ package teste.dev.jr.jr.requests;
 
 import lombok.Builder;
 import lombok.Data;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
@@ -15,8 +16,8 @@ public class ClientesPutRequestBody {
     private Long id;
     @NotBlank(message = "Insira o nome")
     private String nome;
-    @NotNull(message = "Insira o CPF")
-    private Long cpf;
+    @CPF(message = "Insira o CPF")
+    private String CPF;
     @DecimalMin(value = "0", message = "Insira um valor válido")
     private BigDecimal saldo;
 }
