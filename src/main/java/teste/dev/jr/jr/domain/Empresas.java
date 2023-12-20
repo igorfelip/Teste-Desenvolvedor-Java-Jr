@@ -21,7 +21,7 @@ public class Empresas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long cnpj;
+    private String CNPJ;
     private String nome;
     private BigDecimal saldo;
     private BigDecimal taxa;

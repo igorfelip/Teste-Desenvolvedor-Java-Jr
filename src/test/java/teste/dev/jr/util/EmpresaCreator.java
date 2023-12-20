@@ -8,7 +8,7 @@ public class EmpresaCreator {
     public static Empresas criaEmpresaParaSerSalva() {
         return Empresas.builder()
                 .nome("Igor")
-                .cnpj(41255453L)
+                .CNPJ("23.672.157/0001-69")
                 .saldo(BigDecimal.valueOf(0))
                 .taxa(BigDecimal.valueOf(0.02))
                 .build();
@@ -17,7 +17,7 @@ public class EmpresaCreator {
     public static Empresas criaEmpresaValida() {
         return Empresas.builder()
                 .id(1L)
-                .cnpj(41255453L)
+                .CNPJ("23.672.157/0001-69")
                 .saldo(BigDecimal.valueOf(0))
                 .taxa(BigDecimal.valueOf(0.02))
                 .nome("Igor")
@@ -27,7 +27,7 @@ public class EmpresaCreator {
     public static Empresas criaEmpresaParaSerAtualizada() {
         return Empresas.builder()
                 .id(1L)
-                .cnpj(41255453L)
+                .CNPJ("23.672.157/0001-69")
                 .saldo(BigDecimal.valueOf(0))
                 .taxa(BigDecimal.valueOf(0.02))
                 .nome("José")

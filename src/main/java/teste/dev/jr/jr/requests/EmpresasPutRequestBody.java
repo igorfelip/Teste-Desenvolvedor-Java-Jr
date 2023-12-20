@@ -2,6 +2,7 @@ package teste.dev.jr.jr.requests;
 
 import lombok.Builder;
 import lombok.Data;
+import org.hibernate.validator.constraints.br.CNPJ;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
@@ -19,6 +20,6 @@ public class EmpresasPutRequestBody {
     private BigDecimal saldo;
     @DecimalMin(value = "0", message = "Insira um valor válido")
     private BigDecimal taxa;
-    @NotNull(message = "Insira o CNPJ")
-    private Long cnpj;
+    @CNPJ(message = "Insira o CNPJ")
+    private String CNPJ;
 }
